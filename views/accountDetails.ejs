@@ -1,0 +1,183 @@
+<%- include('./partials/metadata') %>
+ <%-  include('./partials/header', {username}) %>
+<main>
+  <div class="container-fluid">
+    <h2 class="section-heading" style="text-align:left">My Account</h2>
+    <hr>
+
+     <div class="Information" style="">
+       <h5 style="text-align:left;padding-top:70px">Personal Information</h5>
+       <hr>
+
+
+     <table class="table table-borderless">
+   <tbody>
+
+     <tr>
+       <th scope="row">username:</th>
+       <td>Jabbar</td>
+     </tr>
+     <tr>
+       <th scope="row">Name:</th>
+       <td>Aosaf Jabbar Alir</td>
+     </tr>
+     <tr>
+       <th scope="row">Phone Number:</th>
+       <td>0187978987</td>
+     </tr>
+     </tbody>
+     </table>
+     </div>
+
+
+
+
+
+
+
+     <h5 style="text-align:left;padding-top:70px">My Applications</h5>
+     <hr>
+    <table class="table ">
+  <thead class="">
+    <tr class="table-primary">
+      <th scope="col">#</th>
+      <th scope="col">Pet ID</th>
+      <th scope="col">Pet Name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>12312sad441</td>
+      <td>Otto</td>
+      <td>Verification Pending</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>123123asdas</td>
+      <td>Thornton</td>
+      <td>Donor Approval Pending</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>123asjdlk213</td>
+      <td>jacky</td>
+      <td>Approved</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Contact</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 style="text-align:left;padding-top:70px">My Donations</h5>
+<hr>
+<table class="table">
+  <thead class="">
+    <tr class="table-success">
+      <th scope="col">#</th>
+      <th scope="col">Pet ID</th>
+      <th scope="col">Pet Name</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>123123asdas</td>
+      <td>Thornton</td>
+      <td>Verification Pending</td>
+      <td><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>123123asdas</td>
+      <td>Thornton</td>
+      <td>Waiting for an Adoptee</td>
+      <td><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>123123asdas</td>
+      <td>Thornton</td>
+      <td>Adoptee requests available</td>
+      <td><a href="/adoptionApprovals"><button class="btn btn-sm btn-info" type="submit" style="margin-right:5px;">See list</button></a><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>123123asdas</td>
+      <td>Thornton</td>
+      <td>Approved an Adoptee</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Contact</button><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 style="text-align:left;padding-top:70px">My Wishlist</h5>
+<hr>
+<table class="table">
+  <thead class="">
+    <tr class="table-info">
+      <th scope="col">#</th>
+      <th scope="col">Pet Description</th>
+      <th scope="col">Status</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>ajkshdkj askjdhkajs asjkhdkjha ajkhsdjksah</td>
+      <td>Pending</td>
+      <td><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>ajkshdkj askjdhkajs asjkhdkjha ajkhsdjksah</td>
+      <td>Available!</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Apply</button><button class="btn btn-sm btn-secondary" type="submit" style="margin-right:5px;">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</main>
+
+
+
+<script>
+
+  window.onscroll = function(){
+      runOnScroll();
+  }
+
+
+  function runOnScroll() {
+      var element = document.getElementsByTagName('nav')  ;
+      if(document.body.scrollTop >= 50 || document.documentElement.scrollTop>=50 ) {
+          element[0].classList.remove('nsize')
+          element[0].classList.add('shrink')
+          document.querySelector(".navbar-brand").style.fontSize="1.8rem";
+          for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+          document.querySelectorAll(".nav-link")[i].style.fontSize="1rem";
+          }
+      } else {
+          element[0].classList.remove('shrink')
+          element[0].classList.add('nsize')
+          document.querySelector(".navbar-brand").style.fontSize="2.2rem";
+           for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+          document.querySelectorAll(".nav-link")[i].style.fontSize="1.2rem";
+          }
+      }
+
+
+  };
+
+</script>
+
+
+
+
+<%- include('./partials/footer'); %>

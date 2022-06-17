@@ -1,0 +1,399 @@
+#title{
+  background-color: #85C88A;
+  color: #fff;
+  text-align: left;
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+
+
+
+.container-fluid{
+  padding:7% 15%;
+}
+#title .container-fluid{
+  padding-top: 3%;
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+
+}
+
+
+/* Heading */
+.big-heading{
+
+  font-size: 4rem;
+  line-height: 1.5;
+
+}
+.section-heading{
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+/* NAVBAR */
+
+.navbar-brand{
+  font-family: 'Ubuntu';
+  font-size: 2.2rem;
+  font-weight: bold;
+
+}
+.nsize{
+  /*padding-bottom:4.5rem ;*/
+  padding: 1% 15%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.nav-link{
+  font-size: 1.2rem;
+  font-weight: 400;
+
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.shrink {
+  padding: 0% 15%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+#title{
+  padding-top: 100px;
+}
+
+/* Buttons */
+
+.download-button{
+  margin: 5% 3% 5% 0;
+}
+
+
+/* IMAGES */
+.img-div{
+  padding: 0;
+}
+.title-img{
+
+  width: 110%;
+
+  }
+
+
+/* Media query breakpoints */
+@media (max-width:1170px){
+  .title-img{
+    position: static;
+    transform: rotate(0);
+  }
+  #title{
+    text-align:center;
+  }
+}
+
+@media (min-width:992px) and (max-width:1170px){
+  .title-img{
+    padding-top: 40px;
+    padding-left: 0;
+  }
+}
+
+/*@media screen and (max-width: 580px) {
+  .navbar {
+    padding: 0% 15% !important;
+  }
+}*/
+/*  Features description */
+
+.feature-img{
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.feature-txt-box{
+  display: table;
+}
+
+.feature-txt-div{
+ display: table-cell;
+ vertical-align: middle;
+
+}
+.feature-txt{
+  line-height: 1.6;
+  padding: 10px 50px;
+}
+
+
+/*daklshdjkh*/
+
+
+#newest{
+  background-color: #85C88A;
+ /* position: relative;*/
+
+}
+/*#newest .container-fluid{
+  padding-top: 6%;
+}*/
+#newest .section-heading{
+  color: #fff;
+  padding-bottom: 40px;
+
+}
+.card{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin-left: 20px;
+
+}
+.newest-img{
+  width: 100%;
+  /*height: 25rem;*/
+}
+
+
+/* Pricing section */
+
+#filter{
+
+}
+.fil-border{
+ margin: 50px 0;
+  /*border: 15px  solid;*/
+
+  border: 15px solid #A2D5AB!important;
+}
+.filter-table{
+  display: table;
+}
+.filter-cell{
+  display: table-cell;
+  vertical-align: middle;
+
+
+
+}
+.filter-txt{
+  color: #85C88A;
+  /*padding-bottom: 50px;*/
+}
+.p-text{
+  color: #A2D5AB ;
+  padding: 0 15px 20px 15px;
+  font-size: 1.5rem;
+}
+.slct {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 5px solid;
+  border-style: solid;
+  border-color: #85C88A;
+  border-radius: 20px;
+  bor
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #000;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+  /*margin-left: 100px;*/
+}
+/* Remove IE arrow */
+.slct::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  left: 50px;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #85C88A;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #fff;
+}
+
+
+
+
+
+
+/* Request */
+
+
+#request{
+  background-color: #85C88A;
+}
+.request-container{
+
+  padding: 5% 15% 0 15%;
+}
+.request-txt{
+  color: #fff;
+}
+.r-text{
+  color: #fff ;
+  padding: 0 0px 20px 0px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+#request input[type=text], textarea {
+  width: 70%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: #A2D5AB;
+}
+
+
+
+#request input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  width: 30%;
+  margin-left:220px ;
+}
+
+#request input[type=submit]:hover {
+  background-color: #000;
+}
+
+.container {
+  border-radius: 5px;
+  /*background-color: #f2f2f2;*/
+  padding: 20px;
+}
+
+.col-75 {
+  float: left;
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+
+/*Testiomonial*/
+
+.ceo-img{
+  margin-top: 30px;
+  width: 70%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.ceo-txt{
+  font-family: 'Satisfy';
+  font-size: 3rem;
+  border: 5px solid #A2D5AB!important;
+  background-color: #A2D5AB;
+}
+/*.txt-border{
+  border: 5px solid;
+}*/
+.ceo-table{
+  display: table;
+}
+.ceo-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+.ceo-name{
+  font-size: 2rem;
+}
+
+
+/*Donate*/
+
+#donate{
+  background-color: #85C88A;
+}
+#donate .container-fluid{
+  padding: 5% 15% 0% 15%;
+}
+.donate-txt{
+  color: #fff;
+}
+.dp-text{
+  color: #fff ;
+  padding: 0 0px 20px 0px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.donate-button{
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  /*width: 20%;*/
+  background-color: #04AA6D;
+}
+.donate-img{
+  position: relative;
+  top: 30px;
+/*  height: 100%;
+  width: 50%;*/
+}
+
+/* footer */
+#footer{
+  padding: 7% 15% 5%;
+  background-color: #fff;
+}
+.footer-p{
+  color: #8f8f8f;
+  font-size: 1.5rem;
+}
+.footer-icon{
+  padding: 20px 10px 20px 10px;
+
+}
+
+.form-control{
+  margin: 30px 0px;
+
+}
+
+/* Signupregister */

@@ -1,0 +1,280 @@
+<%- include('./partials/metadata') %>
+  <%- is_admin ? include('./partials/headerAdmin', {username}) : include('./partials/header', {username}) %>
+    <main>
+
+      <section id="title">
+        <div class="container-fluid">
+          <!-- Nav Bar -->
+
+
+
+          <!-- Title -->
+
+          <div class="row">
+            <div class="col-lg-6 ">
+              <h1 class="big-heading">Get Your Dream Pets Online.</h1>
+              <button type="button" class="btn btn-dark btn-lg download-button"> Pets</button>
+              <a href="#donate"><button type="button" class="btn btn-outline-light btn-lg download-button" > Donate</button></a>
+            </div>
+            <div class="img-div col-lg-6 ">
+              <img class="title-img" src="./images/r2.png" alt="iphone-mockup">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Features -->
+
+      <section id="features">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class=" col-lg-6">
+              <img class="feature-img" src="./images/f1.jpg" alt="Birol Ner building">
+            </div>
+            <div class="feature-txt-box col-lg-6">
+              <div class="feature-txt-div">
+                <h3>Get closer to your partner easier than ever!</h3>
+                <p class="feature-txt">The partner you are looking for, your companion to your sadness and happiness is
+                  now closer than ever! We created this platform to make everything as easy as getting your desired pets
+                  right from your living rooms
+                  sofa. We want to make sure that every pet out there has a home and we people also have a companion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+
+
+      <!-- Newest -->
+
+      <section id="newest">
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <h2 class="section-heading">Our Newest Pets</h1>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                  <img src="images/cat1.jpg" alt="" class="card-img-top newest-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Lucy</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique
+                      repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur.
+                      Incidunt repellendus praesentium quae!
+                    </p>
+                    <a href="" class="btn btn-success btn-sm">Apply</a>
+                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                  <img src="images/cat3.jpg" alt="" class="card-img-top newest-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Leo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique
+                      repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur.
+                      Incidunt repellendus praesentium quae!
+                    </p>
+                    <a href="" class="btn btn-success btn-sm">Apply</a>
+                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 mb-4">
+                <div class="card">
+                  <img src="images/dog1.jpg" alt="" class="card-img-top newest-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Loki</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique
+                      repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur.
+                      Incidunt repellendus praesentium quae!
+                    </p>
+                    <a href="" class="btn btn-success btn-sm">Apply</a>
+                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Filter -->
+
+      <section id="filter">
+
+
+        <div class="fil-border container-fluid">
+          <h2 class="filter-txt section-heading">Filter your favourite choice!</h2>
+          <p class="p-text">Finding your prefered pet is now easy as selecting options. You tell us your type and if it
+            is available we make it appear for you!</p>
+
+
+          <div class="row ">
+
+            <div class="filter-table col-lg-6">
+              <div class="filter-cell">
+                <div class="select">
+                  <select class="slct">
+                    <option value="" disabled selected>Select Your Pet Category</option>
+                    <option value="1">Cat</option>
+                    <option value="2">Dog</option>
+                    <option value="3">Bird</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class=" col-lg-6">
+              <img class="" src="./images/r1.png" alt="Birol Ner building">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </section>
+
+
+      <!-- Request form -->
+
+      <section id="request">
+        <div class="request-container">
+          <div class="row ">
+
+            <h2 class="request-txt section-heading">Wish For Your Desired Pet</h2>
+            <p class="r-text">You want a pet which is not available? We got you covered. Request us giving full
+              description and we will notify you as soon as it will be available.</p>
+            <div class=" col-lg-6">
+              <img class="" src="./images/catbg1.png" alt="Birol Ner building">
+            </div>
+            <div class="col-lg-6">
+              <div class="container">
+                <form action="">
+                  <div class="row">
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="Describe you desired pet.."
+                        style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <input type="submit" value="Submit">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonial -->
+
+      <section id="ceo">
+        <div class="container-fluid">
+
+
+          <h2 class="filter-txt section-heading">Words From Our Owner</h2>
+          <div class="row">
+            <div class=" col-lg-6">
+              <img class="ceo-img" src="./images/ceo.jpg" alt="Birol Ner building">
+            </div>
+            <div class="ceo-table col-lg-6">
+              <div class="txt-border ceo-cell">
+                <p class="ceo-txt">"Your soul is not awake until you start to love an animal, we help to awake it in
+                  every house easily."<br><span class="ceo-name"> -Mahazabeen Afruz Tonni</span></p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donate -->
+      <section id="donate">
+
+
+        <div class="container-fluid">
+          <h2 class="donate-txt section-heading">Donate Your Extra Pets!</h2>
+          <p class="dp-text">Have too many pets to handle? No worries we got your back. Donate your pets to us and then
+            you can choose you want to give your pet to adopt from our very own platform</p>
+
+
+          <div class="col">
+
+            <div class="row-lg-4">
+              <!--  <div class="filter-cell"> -->
+              <a href="/donatePet"><button type="button" class="btn btn-dark btn-lg donate-button"> Donate</button></a>
+            </div>
+            <!-- </div> -->
+            <div class=" row-lg-8">
+              <img class="donate-img" src="./images/r6.png" alt="Birol Ner building">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </section>
+      <!-- Footer -->
+
+      <footer id="footer">
+        <i class="footer-icon fab fa-twitter fa-lg"></i><i class="footer-icon fab fa-facebook-f fa-lg"></i><i
+          class="footer-icon fab fa-instagram fa-lg"></i><i class="footer-icon fas fa-envelope fa-lg"></i>
+        <p class="footer-p">© Copyright Pet Society</p>
+
+      </footer>
+
+
+    </main>
+
+    <script>
+
+      window.onscroll = function(){
+          runOnScroll();
+      }
+
+
+      function runOnScroll() {
+          var element = document.getElementsByTagName('nav')  ;
+          if(document.body.scrollTop >= 50 || document.documentElement.scrollTop>=50 ) {
+              element[0].classList.remove('nsize')
+              element[0].classList.add('shrink')
+              document.querySelector(".navbar-brand").style.fontSize="1.8rem";
+              for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+              document.querySelectorAll(".nav-link")[i].style.fontSize="1rem";
+              }
+          } else {
+              element[0].classList.remove('shrink')
+              element[0].classList.add('nsize')
+              document.querySelector(".navbar-brand").style.fontSize="2.2rem";
+               for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+              document.querySelectorAll(".nav-link")[i].style.fontSize="1.2rem";
+              }
+          }
+
+
+      };
+
+    </script>
+
+    <%- include('./partials/footer'); %>

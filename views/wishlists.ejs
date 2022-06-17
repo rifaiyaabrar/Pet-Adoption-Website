@@ -1,0 +1,48 @@
+<%- include('./partials/metadata') %>
+ <%- is_admin ? include('./partials/headerAdmin', {username}) : include('./partials/header', {username}) %>
+<main>
+  <div class="container-fluid">
+  <h1 class="" style="padding-bottom:40px">Wishlists</h1>
+
+
+<table class="table ">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Description</th>
+      <th scope="col">Decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Marki</td>
+      <td>Otto@sad.com</td>
+      <td>21312</td>
+      <td>fhdklhfkjlshafkljhskj sdfjklhsdjfh slkhdsfl</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Notify</button><button class="btn btn-sm btn-danger" type="submit" style="">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Marki</td>
+      <td>Otto@sad.com</td>
+      <td>21312</td>
+      <td>fhdklhfkjlshafkljhskj sdfjklhsdjfh slkhdsfl</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Notify</button><button class="btn btn-sm btn-danger" type="submit" style="">Remove</button></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Marki</td>
+      <td>Otto@sad.com</td>
+      <td>21312</td>
+      <td>fhdklhfkjlshafkljhskj sdfjklhsdjfh slkhdsfl</td>
+      <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Notify</button><button class="btn btn-sm btn-danger" type="submit" style="">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</main>
+<%- include('./partials/footer'); %>

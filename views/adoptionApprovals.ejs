@@ -1,0 +1,50 @@
+<%- include('./partials/metadata') %>
+ <%-  include('./partials/header', {username}) %>
+<main>
+  <div class="container-fluid">
+    <h1 class="" style="text-align:left">Adoption Approvals</h1>
+    <hr style="margin-bottom:100px">
+
+
+    <table class="table ">
+      <thead class="thead-dark">
+        <tr class="table-success">
+          <th scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">NID</th>
+          <th scope="col">Address</th>
+          <th scope="col">Pet ID</th>
+          <th scope="col">Decision</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Marki</td>
+          <td>2131234(Image link hobe)</td>
+          <td>jigatola,Dhaka</td>
+          <td>dasdasd313</td>
+          <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Approve</button><button class="btn btn-sm btn-secondary" type="submit" style="">Reject</button></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Marki</td>
+          <td>4324324(Image link hobe)</td>
+          <td>jigatola,Dhaka</td>
+          <td>dasdasd313</td>
+          <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Approve</button><button class="btn btn-sm btn-secondary" type="submit" style="">Reject</button></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Marki</td>
+          <td>2131234(Image link hobe)</td>
+          <td>jigatola,Dhaka</td>
+          <td>dasdasd313</td>
+          <td><button class="btn btn-sm btn-success" type="submit" style="margin-right:5px;">Approve</button><button class="btn btn-sm btn-secondary" type="submit" style="">Reject</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+<%- include('./partials/footer'); %>
