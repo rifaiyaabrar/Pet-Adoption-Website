@@ -1,0 +1,66 @@
+<%- include('../partials/metadata') %>
+  <%- locals.is_admin ? include('../partials/headerAdmin', {username}) : include('../partials/header', {username}) %>
+
+    <main class='d-flex justify-content-center'
+      style="background-color:#85C88A; padding-top: 8rem; padding-bottom: 2rem;">
+      <div class="card" style="width: 56rem;">
+        <div class="card-body">
+          <h5 class="card-title">Fillup to Donate</h5>
+          <form action="/donatePet" method="post">
+            <div class="form-floating">
+              <input type="text" name="name" class="form-control" placeholder="Name" disabled
+                value='<%= locals.name %>'>
+              <label>Name</label>
+            </div>
+            <div class="form-floating">
+              <input type="email" name="email" class="form-control" placeholder="email" disabled
+                value='<%= locals.email %>'>
+              <label>Email Address</label>
+            </div>
+            <div class="form-floating">
+              <input type="number" name="nid" class="form-control" placeholder="NID Number" disabled
+                value='<%= locals.nid %>'>
+              <label>NID</label>
+            </div>
+            <div class="form-floating">
+              <input type="number" name="phone" class="form-control" placeholder="phone" value='<%= locals.phone %>'
+                required disabled>
+              <label>Phone Number</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" name="pet_name" class="form-control" placeholder="petName" required>
+              <label>Pet Name</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" name="pet_image" class="form-control" placeholder="petName" required>
+              <label>Pet Image Link</label>
+            </div>
+            <div class="form-group">
+              <textarea name="description" class="form-control" id="description" rows="5"
+                placeholder='Description your pet...'></textarea>
+            </div>
+            <div class="form-group">
+              <select name="catagory" class="form-control">
+                <option value="" disabled selected>Pet Catagory</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Bird">Bird</option>
+              </select>
+            </div>
+            <button class="w-100 btn btn-lg btnSubmit" type="submit"
+              style="background-color:#04AA6D;margin-top:20px">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <%- include('../partials/footer'); %>

@@ -6,8 +6,5 @@ module.exports = [
   require('./registration'),
   require('./account'),
   require('./donatePet'),
-  require('./adoptionApprovals'),
-  require('./applicationVerifications'),
-  require('./donationVerifications'),
-  require('./wishlists'),
+  require('./adoption'),
 ]

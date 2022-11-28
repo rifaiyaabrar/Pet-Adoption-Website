@@ -1,0 +1,105 @@
+<%- include('../partials/metadata') %>
+  <%- include('../partials/header', {username}) %>
+
+    <main>
+      <div class="container-fluid">
+        <h5 style="text-align:left;padding-top:70px">My Applications</h5>
+        <hr>
+        <table class="table ">
+          <thead class="">
+            <tr class="table-warning">
+              <th scope="col">#</th>
+              <th scope="col">Pet ID</th>
+              <th scope="col">Pet Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% request.map(({ id, pet_name, pet_image, status }, i)=> { %>
+              <tr>
+                <th scope="row">
+                  <%= i + 1 %>
+                </th>
+                <td>
+                  <%= id %>
+                </td>
+                <td>
+                  <%= pet_name %>
+                </td>
+                <td>
+                  <%= status %>
+                </td>
+                <td><a href='adoption-cancel/<%= id %> ' class="btn btn-sm btn-secondary" type="submit"
+                    style="margin-right:5px;">Remove</a>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+
+        <h5 style="text-align:left;padding-top:70px">Request Accepted</h5>
+        <hr>
+        <table class="table ">
+          <thead class="">
+            <tr class="table-success">
+              <th scope="col">#</th>
+              <th scope="col">Pet ID</th>
+              <th scope="col">Pet Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% accepted.map(({ id, pet_name, pet_image, status }, i)=> { %>
+              <tr>
+                <th scope="row">
+                  <%= i + 1 %>
+                </th>
+                <td>
+                  <%= id %>
+                </td>
+                <td>
+                  <%= pet_name %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+
+
+    <script>
+
+      window.onscroll = function () {
+        runOnScroll();
+      }
+
+
+      function runOnScroll() {
+        var element = document.getElementsByTagName('nav');
+        if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+          element[0].classList.remove('nsize')
+          element[0].classList.add('shrink')
+          document.querySelector(".navbar-brand").style.fontSize = "1.8rem";
+          for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+            document.querySelectorAll(".nav-link")[i].style.fontSize = "1rem";
+          }
+        } else {
+          element[0].classList.remove('shrink')
+          element[0].classList.add('nsize')
+          document.querySelector(".navbar-brand").style.fontSize = "2.2rem";
+          for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+            document.querySelectorAll(".nav-link")[i].style.fontSize = "1.2rem";
+          }
+        }
+
+
+      };
+
+    </script>
+
+
+
+
+    <%- include('../partials/footer'); %>

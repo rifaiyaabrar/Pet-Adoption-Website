@@ -1,0 +1,74 @@
+<%- include('../partials/metadata') %>
+  <%- include('../partials/header', {username}) %>
+
+    <% const {name, email, password, phone, nid}=user %>
+      <main>
+        <div class="container-fluid">
+          <h2 class="section-heading" style="text-align:left">My Account</h2>
+          <hr>
+
+          <div class="Information" style="">
+            <h5 style="text-align:left;padding-top:70px">Personal Information</h5>
+            <hr>
+            <table class="table table-borderless">
+              <tbody>
+                <tr>
+                  <th scope="row">Username:</th>
+                  <td>
+                    <%= username %>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Name:</th>
+                  <td>
+                    <%= name %>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone Number:</th>
+                  <td>
+                    <%= phone %>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+
+
+
+      <script>
+
+        window.onscroll = function () {
+          runOnScroll();
+        }
+
+
+        function runOnScroll() {
+          var element = document.getElementsByTagName('nav');
+          if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+            element[0].classList.remove('nsize')
+            element[0].classList.add('shrink')
+            document.querySelector(".navbar-brand").style.fontSize = "1.8rem";
+            for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+              document.querySelectorAll(".nav-link")[i].style.fontSize = "1rem";
+            }
+          } else {
+            element[0].classList.remove('shrink')
+            element[0].classList.add('nsize')
+            document.querySelector(".navbar-brand").style.fontSize = "2.2rem";
+            for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+              document.querySelectorAll(".nav-link")[i].style.fontSize = "1.2rem";
+            }
+          }
+
+
+        };
+
+      </script>
+
+
+
+
+      <%- include('../partials/footer'); %>

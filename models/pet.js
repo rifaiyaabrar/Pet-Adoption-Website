@@ -1,34 +1,38 @@
 const mongoose = require('mongoose')
 
 const petSchema = new mongoose.Schema({
-  catagory : {
-    type     : String,
-    required : true,
+  username: {
+    type: String,
+    default: '',
   },
-  items    : [
+  pet_name: {
+    type: String,
+    default: '',
+  },
+  pet_image: {
+    type: String,
+    default: '',
+  },
+  description: {
+    type: String,
+    default: '',
+  },
+  catagory: {
+    type: String,
+    default: '',
+  },
+  status: {
+    type: String,
+    default: 'Pending',
+  },
+  donated_to: {
+    type: String
+  },
+  request: [
     {
-      image       : {
-        type    : String,
-        default : '',
-      },
-      name        : {
-        type     : String,
-        required : true,
-      },
-      description : {
-        type    : String,
-        default : '',
-      },
-      Breed : {
-        type    : String,
-        required : true,
-      },
-      Requirements : {
-        type    : String,
-        default : '',
-      },
-    },
-  ],
+      type: String,
+    }
+  ]
 })
 
 const pet = mongoose.model('pet', petSchema)

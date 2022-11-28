@@ -1,0 +1,60 @@
+<%- include('../partials/metadata') %>
+  <%- include('../partials/headerAdmin', {username}) %>
+
+    <main>
+      <div class="container-fluid">
+        <h1 class="" style="padding-bottom:40px">Donation Requests</h1>
+
+        <table class="table ">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">NID</th>
+              <th scope="col">Pet ID</th>
+              <th scope="col">Pet Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% pet.map(({ id, pet_name, username, email, phone, nid }, i)=> { %>
+              <tr>
+                <th scope="row">
+                  <%= i + 1 %>
+                </th>
+                <td>
+                  <%= username %>
+                </td>
+                <td>
+                  <%= email %>
+                </td>
+                <td>
+                  <%= phone %>
+                </td>
+                <td>
+                  <%= nid %>
+                </td>
+                <td>
+                  <%= id %>
+                </td>
+                <td>
+                  <%= pet_name %>
+                </td>
+                <td>
+                  <a href='/donationVerifications-approve/<%= id %> ' class="btn btn-sm btn-success" type="submit"
+                    style="margin-right:5px;">Approve</a>
+                  <a href='/donationVerifications-reject/<%= id %> ' class="btn btn-sm btn-danger" type="submit"
+                    style="">Reject</a>
+                </td>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+
+
+    <%- include('../partials/footer'); %>

@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
     type     : Number,
     required : true,
   },
+  nid :{
+    type: Number,
+    required : true,
+  },
   is_admin : {
     type     : Boolean,
     default  : false,

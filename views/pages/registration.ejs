@@ -1,0 +1,58 @@
+<%- include('../partials/metadata_ns') %>
+  <%- include('../partials/headerNotSigned') %>
+
+    <div class="bg-image text-center">
+      <main class="form-signin">
+        <!-- <img class="mb-4 img-logo" src="images/logo2.png" alt="" width="320" height="140" style="color: white;"> -->
+        <form class=borderform action="/registration" method="post">
+
+          <!-- <div id="liveAlertPlaceholder"></div> -->
+          <div>
+            <h1 style="color:white;font-size: 2rem;text-align: left;" class="h3 mb-3 fw-normal">Register Here</h1>
+            <% if (locals.type, locals.message) { %>
+              <div class="alert alert-<%= type %>" role="alert">
+                <div class="alert-message" align="center">
+                  <strong>
+                    <%= message %>
+                  </strong>
+                </div>
+              </div>
+              <% }%>
+                <!-- else { %>
+            <h3 class='text-center mb-2'>SIGN UP</h3> -->
+
+                <div class="form-floating">
+                  <input type="text" name="username" class="form-control top" placeholder="Username" required autofocus>
+                  <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating">
+                  <input type="text" name="name" class="form-control middle" placeholder="Name" required>
+                  <label for="floatingPassword">Name</label>
+                </div>
+                <div class="form-floating">
+                  <input type="email" name="email" class="form-control middle" placeholder="example@email.com" required>
+                  <label for="floatingPassword">Email Address</label>
+                </div>
+                <div class="form-floating">
+                  <input type="number" name="phone" class="form-control middle" id="liveAlertBtn"
+                    placeholder="Phone Number" required>
+                  <label for="floatingPassword">Phone Number</label>
+                </div>
+                <div class="form-floating">
+                  <input type="number" name="nid" class="form-control bottom" id="liveAlertBtn" placeholder="NID Number"
+                    required>
+                  <label for="floatingPassword">NID Number</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" name="password" class="form-control" id="liveAlertBtn" placeholder="password"
+                    required>
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <br>
+                <button class="w-100 btn btn-lg btnSubmit" type="submit">Sign Me Up</button>
+                <p class="mt-5 mb-3 text-muted">&copy; Pet Society </p>
+        </form>
+      </main>
+
+    </div>
+    <%- include('../partials/footer'); %>

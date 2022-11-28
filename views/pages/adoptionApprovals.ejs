@@ -1,0 +1,96 @@
+<%- include('../partials/metadata') %>
+  <%- include('../partials/header', {username}) %>
+    <main>
+      <div class="container-fluid">
+        <h1 class="" style="text-align:left">Adoption Approvals</h1>
+        <hr style="margin-bottom:100px">
+
+        <h5 style="text-align:left;padding-top:70px">My Donations</h5>
+        <hr>
+        <table class="table">
+          <thead class="">
+            <tr class="table-primary">
+              <th scope="col">#</th>
+              <th scope="col">Pet ID</th>
+              <th scope="col">Pet Name</th>
+              <th scope="col">Status</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% donated.map(({ id, pet_name, pet_image, status }, i)=> { %>
+              <tr>
+                <th scope="row">
+                  <%= i + 1 %>
+                </th>
+                <td>
+                  <%= id %>
+                </td>
+                <td>
+                  <%= pet_name %>
+                </td>
+                <td>
+                  <%= status %>
+                </td>
+                <td><a href='donation-cancel/<%= id %>' class="btn btn-sm btn-secondary" type="submit"
+                    style="margin-right:5px;">Remove</a>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+
+        <% pet.map(({ id, pet_name, request }, i)=> { %>
+          <h4 class="ms-1" style="text-align:left">
+            <%= pet_name %>
+          </h4>
+          <table class="table ">
+            <thead class="thead-dark">
+              <tr class="table-success">
+                <th scope="col">#</th>
+                <th scope="col">Username</th>
+                <th scope="col">NID</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Pet ID</th>
+                <th scope="col">Pet Name</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% request.map(({ username, nid, phone }, i)=> { %>
+                <tr>
+                  <th scope="row">
+                    <%= i + 1 %>
+                  </th>
+                  <td>
+                    <%= username %>
+                  </td>
+                  <td>
+                    <%= nid %>
+                  </td>
+                  <td>
+                    <%= phone %>
+                  </td>
+                  <td>
+                    <%= id %>
+                  </td>
+                  <td>
+                    <%= pet_name %>
+                  </td>
+                  <td>
+                    <a href='adoption-accept/<%= id %>/<%= username %>' class="btn btn-sm btn-success" type="submit"
+                      style="margin-right:5px;">Approve</a>
+                    <a href='adoption-reject/<%= id %>/<%= username %>' class="btn btn-sm btn-danger" type="submit"
+                      style="margin-right:5px;">Reject</a>
+                  </td>
+                </tr>
+                <% }) %>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <% }) %>
+      </div>
+    </main>
+
+    <%- include('../partials/footer'); %>

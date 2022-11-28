@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/signin', (req, res) => {
   if (req.session.username) return res.redirect('/')
-  res.render('signin', { username: req.session.username })
+  return res.render('pages/signin', { username: req.session.username })
 })
 
 router.post('/signin', async (req, res) => {
@@ -14,9 +14,9 @@ router.post('/signin', async (req, res) => {
 
   const userFound = await user.findOne({ username })
   if (!userFound) {
-    res.render('signin', {
-      message : 'Username/Password do not match',
-      type    : 'danger',
+    return res.render('pages/signin', {
+      message: 'Username/Password do not match',
+      type: 'danger',
     })
   } else {
     user.find({ username }).then(users => {
@@ -27,11 +27,11 @@ router.post('/signin', async (req, res) => {
           req.session.username = user.username
           req.session.is_admin = user.is_admin
 
-          res.redirect('/')
+          return res.redirect('/')
         } else {
-          res.render('signin', {
-            message : 'Username/Password do not match',
-            type    : 'danger',
+          return res.render('pages/signin', {
+            message: 'Username/Password do not match',
+            type: 'danger',
           })
         }
       })

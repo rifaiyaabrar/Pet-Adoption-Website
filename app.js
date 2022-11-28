@@ -8,9 +8,9 @@ const app = express()
 
 app.use(
   session({
-    secret            : '3CWF-rrZ3-WRxAQ378',
-    resave            : true,
-    saveUninitialized : true,
+    secret: '3CWF-rrZ3-WRxAQ378',
+    resave: true,
+    saveUninitialized: true,
   })
 )
 
@@ -25,9 +25,9 @@ routes.map(route => app.use(route))
 
 //server start
 mongoose
-  .connect('mongodb://localhost:27017/petSociety', {
-    useUnifiedTopology : true,
-    useNewUrlParser    : true,
+  .connect('mongodb://localhost:27017/petSocietyDB', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
   })
   .then(() => {
     app.listen(5000, () => {

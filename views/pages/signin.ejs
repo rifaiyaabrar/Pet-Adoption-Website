@@ -1,0 +1,42 @@
+<%- include('../partials/metadata_ns') %>
+  <%- include('../partials/headerNotSigned') %>
+    <div class="bg-image text-center">
+      <main class="form-signin">
+        <!-- <img class="mb-4 img-logo" src="images/logo2.png" alt="" width="320" height="140" style="color: white;"> -->
+        <form class='borderform' action="/signin" method="post">
+
+          <!-- <div id="liveAlertPlaceholder"></div> -->
+          <div>
+            <h1 style="color:white;font-size: 2rem;text-align: left;" class="h3 mb-3 fw-normal">Sign in here</h1>
+            <% if (locals.type, locals.message) { %>
+              <div class="alert alert-<%= type %>" role="alert">
+                <div class="alert-message" align="center">
+                  <strong>
+                    <%= message %>
+                  </strong>
+                </div>
+              </div>
+              <% } %>
+                <div class="form-floating">
+                  <input type="text" name="username" class="form-control top" placeholder="Username" required autofocus>
+                  <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" name="password" class="form-control middle" id="liveAlertBtn"
+                    placeholder="password" required>
+                  <label for="floatingPassword">Password</label>
+                </div>
+
+                <!-- <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div> -->
+
+                <input class="w-100 btn btn-lg btnSubmit" type="submit" value='Log In' />
+                <p class="mt-5 mb-3 text-muted">&copy; Pet Society </p>
+        </form>
+      </main>
+
+    </div>
+    <%- include('../partials/footer'); %>

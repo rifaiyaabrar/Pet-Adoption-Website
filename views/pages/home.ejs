@@ -1,0 +1,217 @@
+<%- include('../partials/metadata') %>
+  <%- is_admin ? include('../partials/headerAdmin', {username}) : include('../partials/header', {username}) %>
+    <main>
+
+      <section id="title">
+        <div class="container-fluid">
+          <!-- Nav Bar -->
+
+
+
+          <!-- Title -->
+
+          <div class="row">
+            <div class="col-lg-6 ">
+              <h1 class="big-heading">Get Your Dream Pets Online.</h1>
+              <a href='#adopt' class="btn btn-dark btn-lg download-button"> Pets</a>
+              <a href="#donate" class="btn btn-outline-light btn-lg download-button"> Donate</a>
+            </div>
+            <div class="img-div col-lg-6 ">
+              <img class="title-img" src="./images/r2.png" alt="iphone-mockup">
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Features -->
+
+      <section id="features">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class=" col-lg-6">
+              <img class="feature-img" src="./images/f1.jpg" alt="Birol Ner building">
+            </div>
+            <div class="feature-txt-box col-lg-6">
+              <div class="feature-txt-div">
+                <h3>Get closer to your partner easier than ever!</h3>
+                <p class="feature-txt">The partner you are looking for, your companion to your sadness and happiness is
+                  now closer than ever! We created this platform to make everything as easy as getting your desired pets
+                  right from your living rooms
+                  sofa. We want to make sure that every pet out there has a home and we people also have a companion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+      <!-- Adopt -->
+      <section id="adopt">
+        <div class="container-fluid">
+          <div class="row w-100">
+            <h2 class="section-heading">Pets for Adoption</h1>
+              <form action='/home#adopt' method='get' class="form-group w-auto" style='margin-left: auto;'>
+                <select name='catagory' class="form-control" onchange='this.form.submit()'>
+                  <option value="All" <%=(!locals.catagory || locals.catagory==="All" )? "selected" : null %>
+                    >All
+                    types
+                  </option>
+                  <option value="Cat" <%=(locals.catagory==="Cat" )? "selected" : null %>>Cat</option>
+                  <option value="Dog" <%=(locals.catagory==="Dog" )? "selected" : null %>>Dog</option>
+                  <option value="Bird" <%=(locals.catagory==="Bird" )? "selected" : null %>>Bird</option>
+                </select>
+              </form>
+              <div class='d-flex flex-wrap'>
+                <% locals.store.map(({id, pet_name, description, catagory, pet_image})=> { %>
+                  <div class="col-lg-4 mb-4">
+                    <div class="card">
+                      <img src="<%= pet_image %>" alt="" class="card-img-top adopt-img">
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          <%= pet_name %>
+                        </h5>
+                        <h5 class="card-title">
+                          <%= catagory %>
+                        </h5>
+                        <p class="card-text">
+                          <%= description %>
+                        </p>
+                        <a href="/adoption-request/<%= id %>" class="btn btn-success btn-sm">Apply</a>
+                      </div>
+                    </div>
+                  </div>
+                  <% }) %>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Request form -->
+
+      <section id="request">
+        <div class="request-container">
+          <div class="row ">
+            <h2 class="request-txt section-heading">Wish For Your Desired Pet</h2>
+            <p class="r-text">You want a pet which is not available? We got you covered. Request us giving full
+              description and we will notify you as soon as it will be available.</p>
+            <div class=" col-lg-6">
+              <img class="" src="./images/catbg1.png" alt="Birol Ner building">
+            </div>
+            <div class="col-lg-6">
+              <div class="container">
+                <form action="">
+                  <div class="row">
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="Describe you desired pet.."
+                        style="height:200px"></textarea>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                    <input type="submit" value="Submit">
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- testimonial -->
+
+      <section id="ceo">
+        <div class="container-fluid">
+          <h2 class="filter-txt section-heading">Words From Our Owner</h2>
+          <div class="row">
+            <div class=" col-lg-6">
+              <img class="ceo-img" src="./images/ceo.jpg" alt="Birol Ner building">
+            </div>
+            <div class="ceo-table col-lg-6">
+              <div class="txt-border ceo-cell">
+                <p class="ceo-txt">"Your soul is not awake until you start to love an animal, we help to awake it in
+                  every house easily."<br><span class="ceo-name"> -Mahazabeen Afruz Tonni</span></p>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Donate -->
+      <section id="donate">
+
+
+        <div class="container-fluid">
+          <h2 class="donate-txt section-heading">Donate Your Extra Pets!</h2>
+          <p class="dp-text">Have too many pets to handle? No worries we got your back. Donate your pets to us and then
+            you can choose you want to give your pet to adopt from our very own platform</p>
+
+
+          <div class="col">
+
+            <div class="row-lg-4">
+              <!--  <div class="filter-cell"> -->
+              <a href="/donatePet"><button type="button" class="btn btn-dark btn-lg donate-button"> Donate</button></a>
+            </div>
+            <!-- </div> -->
+            <div class=" row-lg-8">
+              <img class="donate-img" src="./images/r6.png" alt="Birol Ner building">
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </section>
+      <!-- Footer -->
+
+      <footer id="footer">
+        <i class="footer-icon fab fa-twitter fa-lg"></i><i class="footer-icon fab fa-facebook-f fa-lg"></i><i
+          class="footer-icon fab fa-instagram fa-lg"></i><i class="footer-icon fas fa-envelope fa-lg"></i>
+        <p class="footer-p">© Copyright Pet Society</p>
+
+      </footer>
+
+
+    </main>
+
+    <script>
+
+      window.onscroll = function () {
+        runOnScroll();
+      }
+
+
+      function runOnScroll() {
+        var element = document.getElementsByTagName('nav');
+        if (document.body.scrollTop >= 50 || document.documentElement.scrollTop >= 50) {
+          element[0].classList.remove('nsize')
+          element[0].classList.add('shrink')
+          document.querySelector(".navbar-brand").style.fontSize = "1.8rem";
+          for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+            document.querySelectorAll(".nav-link")[i].style.fontSize = "1rem";
+          }
+        } else {
+          element[0].classList.remove('shrink')
+          element[0].classList.add('nsize')
+          document.querySelector(".navbar-brand").style.fontSize = "2.2rem";
+          for (var i = 0; i < document.querySelectorAll(".nav-link").length; i++) {
+            document.querySelectorAll(".nav-link")[i].style.fontSize = "1.2rem";
+          }
+        }
+
+
+      };
+
+    </script>
+
+    <%- include('../partials/footer'); %>

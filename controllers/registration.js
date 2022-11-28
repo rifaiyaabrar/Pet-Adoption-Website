@@ -5,22 +5,20 @@ const user = require('../models/user')
 router.get('/registration', (req, res) => {
   if (req.session.username) return res.redirect('/')
 
-  res.render('registration', { username: req.session.username })
+  return res.render('pages/registration', { username: req.session.username })
 })
 router.post('/registration', async (req, res) => {
   if (req.session.username) return res.redirect('/')
 
-  const { name, username, email, password, phone } = req.body
-  console.log(name, username, email, password, phone)
+  const { name, username, email, password, nid, phone } = req.body
 
   const userFound = await user.findOne({ username })
 
   if (userFound) {
-    res.render('registration', {
-      message : 'User with that email already exists',
-      type    : 'danger',
+    return res.render('pages/registration', {
+      message: 'User with that email already exists',
+      type: 'danger',
     })
-    res.redirect('/registration')
   } else {
     try {
       await new user({
@@ -28,18 +26,16 @@ router.post('/registration', async (req, res) => {
         name,
         email,
         password,
+        nid,
         phone,
       }).save()
 
-      res.redirect('/signin')
+      return res.redirect('/signin')
     } catch (error) {
-      console.log(error)
-      res.render('registration', {
-        message : 'Fill all fields',
-        type    : 'danger',
+      return res.render('pages/registration', {
+        message: 'Fill all fields',
+        type: 'danger',
       })
-      res.redirect('/registration')
-      res.redirect('/registration')
     }
   }
 })
